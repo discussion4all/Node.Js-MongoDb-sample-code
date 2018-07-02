@@ -1,0 +1,28 @@
+<% include header %>
+<body>
+	<div class="main-model-page">
+		<div class="model-content">
+			<div class="main-form-div signup-div animate">
+				<h4>Edit</h4>
+				<br/>
+				<form action="/edit" method="post">
+					<div class="input-field f-table">
+						<input type="hidden" name="hdId" value="<%= data._id%>">
+						<label>Email: </label>
+						<span class="input-s"><input type="email" class="form-input" placeholder="Email"  name="email" value="<%= data.email%>"></span>
+					</div>
+					<br />
+					<div class="input-field f-table">
+						<label>Name: </label>
+						<span class="input-s"><input type="text" class="form-input" placeholder="Display Name(public)" name="name" value="<%= data.name%>"></span>
+					</div>
+					<br />
+					<div class="login-butoon">
+						<input type="submit" class="login-b" value="Save">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+<% include footer %>

@@ -1,0 +1,45 @@
+
+<% include header %>
+<body>
+	<div class="main-model-page">
+		<div class="model-content">
+			<div class="main-form-div animate">
+
+				<h4>Login</h4>
+
+				<% if (error.length > 0) { %>
+        			<div class="error" style="color: red;">
+        				<%= error %>
+        			</div>
+    			<% } %>
+    			<% if (success.length > 0) { %>
+        			<div class="success">
+        				<%= success %>
+        			</div>
+    			<% } %>
+    			
+    			<br/>
+				<form action="/login" method="post">
+					<div class="input-field f-table">
+						<label>Email: </label>
+						<span class="input-s"><input type="email" class="form-input" placeholder="Email" name="email" value="<%= (formData) ? formData.email : '' %>"></span>
+					</div>
+					<br/>
+					<div class="input-field f-table">
+						<label>Password: </label>
+						<span class="input-s"> <input type="password" class="form-input" placeholder="Password" name="password" value="<%= (formData) ? formData.password : '' %>"> </span>
+					</div>
+					<br/>
+					<div class="login-butoon">
+						<input type="submit" class="login-b" value="Login">
+					</div>
+					<!-- <div class="signup">
+						Don't have an account?<a href="/signup"> Sign Up</a>
+					</div> -->
+				</form>
+				<a href="/registration">Click here to signup</a>
+			</div>
+		</div>
+	</div>
+</body>
+<% include footer %>

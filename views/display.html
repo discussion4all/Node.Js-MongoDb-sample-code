@@ -1,0 +1,19 @@
+<% include header %>
+<body>
+	<h1>UserList</h1>
+<table border=2>
+	<tr>
+	    <td>Name</td>
+		<td>E-Mail</td>
+		<td>Action</td>
+	</tr>
+	<tr>
+	  <% for(var val in data) { %> 
+	    <td><%= data[val].name  %></td>
+		<td><%= data[val].email  %></td>
+		<td><a href="/edit/<%= data[val]._id %>">[Edit] </a><a href="/delete/<%= data[val]._id %>"> [Delete]</a></td>
+	</tr>
+ <% } %>
+</table>
+</body>
+<% include footer %>
