@@ -1,4 +1,4 @@
 module.exports = {  
     jwtSecret: "devdacticIsAwesome",
-    mongoURL: 'mongodb://127.0.0.1:27017/skeleton'
+    mongoURL: 'mongodb+srv://admin:admin@cluster0-jlrzq.mongodb.net/test?retryWrites=true&w=majority'
 };

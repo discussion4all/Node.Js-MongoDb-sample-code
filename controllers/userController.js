@@ -37,14 +37,14 @@ module.exports.getSignup = function(req, res) {
 
 module.exports.signup = function(req, res) {
 	generateToken(req);
-	res.redirect('/login',{title:"Login"});
+	res.redirect('/login');
 }
 
 //---Logout
 module.exports.logout = function(req, res) {
 	req.logout();
 	req.session.destroy(); // Session Destroy
-	res.redirect('/login',{title:"login"});
+	res.redirect('/login');
 }
 
 //--- User List
@@ -88,7 +88,7 @@ module.exports.edit = function(req, res) {
 		if(err){
 			console.log(err);
 		}else{
-			res.redirect("/display",{title: "Display"});
+			res.redirect("/display");
 		}
 
 	});
